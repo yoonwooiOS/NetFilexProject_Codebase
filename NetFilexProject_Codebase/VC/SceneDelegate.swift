@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabarController.setViewControllers([firstViewController, secondViewController,thirdViewController], animated: true)
         
         tabarController.tabBar.tintColor = .white
+        tabarController.tabBar.barTintColor = .systemGray5
         
         if let items = tabarController.tabBar.items {
             
