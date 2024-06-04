@@ -50,6 +50,7 @@ class NetfliexMainViewController: UIViewController {
         view.addSubview(newSeriesImage)
         view.addSubview(netflixLogo)
         
+        
     }
     
     func configureLayout() {
