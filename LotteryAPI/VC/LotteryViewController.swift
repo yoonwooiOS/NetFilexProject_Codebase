@@ -14,9 +14,9 @@ import Alamofire
 
 
 
-class LotteryViewController: UIViewController {
+class LotteryViewController: UIViewController, UITextFieldDelegate {
     
-    let lottoNumberTextfield = UITextField()
+    var lottoNumberTextfield = UITextField()
     let winningNumberGuideLabel = UILabel()
     let dataLabel = UILabel()
     let customShadowImage = UIView()
@@ -33,14 +33,14 @@ class LotteryViewController: UIViewController {
     let pickerView = UIPickerView()
     let rounds = Array(900...999)
     var roundList: [Int] = []
-  
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         roundList.append(contentsOf: rounds)
         view.backgroundColor = .white
+        
         requireLottoApi()
         configurePickerView()
         configureHierarchy()
@@ -48,7 +48,7 @@ class LotteryViewController: UIViewController {
         configureUI()
         
     }
-
+    
     func configureHierarchy() {
         view.addSubview(lottoNumberTextfield)
         view.addSubview(winningNumberGuideLabel)
@@ -136,9 +136,8 @@ class LotteryViewController: UIViewController {
         
         navigationItem.title = "Lotto"
         lottoNumberTextfield.backgroundColor = .lightGray
-        lottoNumberTextfield.addTarget(self, action: #selector(selectedLottoRound), for: .touchDown)
         lottoNumberTextfield.textAlignment = .center
-       
+        
         winningNumberGuideLabel.text = "당첨번호 안내"
         customShadowImage.backgroundColor = .systemGray5
         
@@ -172,50 +171,82 @@ class LotteryViewController: UIViewController {
             }
         }
     }
-        @objc func selectedLottoRound() {
-            
-           
-        }
-            
-            
-            
-        
-        
-    }
-  
+}
+
 
 extension LotteryViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
-   
+    func configureToolbar() {
+        
+        let toolBar = UIToolbar()
+        
+        toolBar.barStyle = UIBarStyle.default
+        // 반투명효과
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.black
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(donePicker))
+        // 툴바 옵션에는 left,rightBarButtonItem이 없기 때문에 공간을 줘서 위치를 잡음
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let cancelButton = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(cacelPicker))
+        
+        toolBar.setItems([cancelButton,flexibleSpace,doneButton], animated: false)
+        // 뷰의 터치 이벤트 처리, 기본은 true, false로 되어 있으면 취소 | 완료 BarButton을 누를 수 없음
+        toolBar.isUserInteractionEnabled = true
+        
+        lottoNumberTextfield.inputAccessoryView = toolBar
+    }
+    
     func configurePickerView() {
         
         lottoNumberTextfield.inputView = pickerView
-        
+        configureToolbar()
         pickerView.delegate = self
         pickerView.dataSource = self
-       
+        
         
     }
-    // pickerView Compoents 개수
+    
+    @objc func donePicker() {
+        
+        let row = pickerView.selectedRow(inComponent: 0)
+        pickerView.selectRow(row, inComponent: 0, animated: false)
+        lottoNumberTextfield.text = "\(roundList[row])"
+        // 툴바 내림 메서드
+        lottoNumberTextfield.resignFirstResponder()
+        
+        Lotto.drwNo = roundList[row]
+        requireLottoApi()
+        
+    }
+    @objc func cacelPicker() {
+        lottoNumberTextfield.text = nil
+        lottoNumberTextfield.resignFirstResponder()
+        
+        
+    }
+    // Components - tableView의 Section
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-       
         
         return roundList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         return String(roundList[row])
         
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
         lottoNumberTextfield.text = String(roundList[row])
-        Lotto.drwNo = roundList[row]
-        requireLottoApi()
+        
     }
     
 }
