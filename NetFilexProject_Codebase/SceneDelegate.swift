@@ -13,8 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
-        guard let _ = (scene as? UIWindowScene) else { return }
-        
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
         let firstViewController = UINavigationController(rootViewController: NetfliexMainViewController())
         let secondViewController = UINavigationController(rootViewController: NewAndHotViewController())
         let thirdViewController = UINavigationController(rootViewController: SavedContentsViewController())
@@ -39,7 +39,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             items[2].title = "저장된 콘텐츠 목록"
             
         }
-        window?.rootViewController = tabarController
+        
+        let mainvc = LotteryViewController()
+        let navigationController = UINavigationController(rootViewController: mainvc)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

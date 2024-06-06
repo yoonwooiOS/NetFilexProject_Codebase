@@ -27,7 +27,7 @@ class NetfliexMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         configureHierarchy()
         configureLayout()
         configureUI()
@@ -154,10 +154,9 @@ class NetfliexMainViewController: UIViewController {
         playButton.contentVerticalAlignment = .fill
         playButton.contentHorizontalAlignment = .fill
         playButton.configuration?.imagePadding = 2
+        
         myBookmarkListButton.primaryButton(buttonTitle: "+ 내가 찜한 리스트", titleColor: .white, fontSize: 14, backgroundColor: .darkGray, cornerRadius: 10, assetImageName: "")
        
       
     }
-    
-    
 }

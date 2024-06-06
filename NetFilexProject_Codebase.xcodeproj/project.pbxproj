@@ -22,6 +22,11 @@
 		99245E202C0F361C0023A63E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245E1F2C0F361C0023A63E /* UIImageView+Extension.swift */; };
 		99245E222C0F6C400023A63E /* NewAndHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245E212C0F6C400023A63E /* NewAndHotViewController.swift */; };
 		99245E242C0F6C500023A63E /* SavedContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245E232C0F6C500023A63E /* SavedContentsViewController.swift */; };
+		99245EAB2C11BD620023A63E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 99245EAA2C11BD620023A63E /* .gitignore */; };
+		99245EAE2C11BD9D0023A63E /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EAD2C11BD9D0023A63E /* APIKey.swift */; };
+		99245EB02C11BEA90023A63E /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EAF2C11BEA90023A63E /* LotteryViewController.swift */; };
+		99245EB32C11D3810023A63E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 99245EB22C11D3810023A63E /* Alamofire */; };
+		99245EB62C11D3CD0023A63E /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EB52C11D3CD0023A63E /* Lotto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,10 @@
 		99245E1F2C0F361C0023A63E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		99245E212C0F6C400023A63E /* NewAndHotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAndHotViewController.swift; sourceTree = "<group>"; };
 		99245E232C0F6C500023A63E /* SavedContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedContentsViewController.swift; sourceTree = "<group>"; };
+		99245EAA2C11BD620023A63E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		99245EAD2C11BD9D0023A63E /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		99245EAF2C11BEA90023A63E /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
+		99245EB52C11D3CD0023A63E /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99245E162C0F0DDE0023A63E /* SnapKit in Frameworks */,
+				99245EB32C11D3810023A63E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +68,9 @@
 		99245DF22C0F0B870023A63E = {
 			isa = PBXGroup;
 			children = (
+				99245EAA2C11BD620023A63E /* .gitignore */,
+				99245EAC2C11BD860023A63E /* APIKeys */,
+				99245EA82C11BC5A0023A63E /* LotteryAPI */,
 				99245DFD2C0F0B870023A63E /* NetFilexProject_Codebase */,
 				99245DFC2C0F0B870023A63E /* Products */,
 			);
@@ -77,6 +90,8 @@
 				99245E262C0F6C5E0023A63E /* Extension */,
 				99245E252C0F6C580023A63E /* VC */,
 				99245E022C0F0B870023A63E /* ViewController.swift */,
+				99245E002C0F0B870023A63E /* SceneDelegate.swift */,
+				99245DFE2C0F0B870023A63E /* AppDelegate.swift */,
 				99245E042C0F0B870023A63E /* Main.storyboard */,
 				99245E072C0F0B8A0023A63E /* Assets.xcassets */,
 				99245E092C0F0B8A0023A63E /* LaunchScreen.storyboard */,
@@ -92,8 +107,6 @@
 				99245E1D2C0F31A30023A63E /* NetfliexMainViewController.swift */,
 				99245E212C0F6C400023A63E /* NewAndHotViewController.swift */,
 				99245E232C0F6C500023A63E /* SavedContentsViewController.swift */,
-				99245E002C0F0B870023A63E /* SceneDelegate.swift */,
-				99245DFE2C0F0B870023A63E /* AppDelegate.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -107,6 +120,39 @@
 				99245E1F2C0F361C0023A63E /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		99245EA82C11BC5A0023A63E /* LotteryAPI */ = {
+			isa = PBXGroup;
+			children = (
+				99245EB42C11D3C30023A63E /* Model */,
+				99245EA92C11BCEE0023A63E /* VC */,
+			);
+			path = LotteryAPI;
+			sourceTree = "<group>";
+		};
+		99245EA92C11BCEE0023A63E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				99245EAF2C11BEA90023A63E /* LotteryViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		99245EAC2C11BD860023A63E /* APIKeys */ = {
+			isa = PBXGroup;
+			children = (
+				99245EAD2C11BD9D0023A63E /* APIKey.swift */,
+			);
+			path = APIKeys;
+			sourceTree = "<group>";
+		};
+		99245EB42C11D3C30023A63E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99245EB52C11D3CD0023A63E /* Lotto.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +173,7 @@
 			name = NetFilexProject_Codebase;
 			packageProductDependencies = (
 				99245E152C0F0DDE0023A63E /* SnapKit */,
+				99245EB22C11D3810023A63E /* Alamofire */,
 			);
 			productName = NetFilexProject_Codebase;
 			productReference = 99245DFB2C0F0B870023A63E /* NetFilexProject_Codebase.app */;
@@ -158,6 +205,7 @@
 			mainGroup = 99245DF22C0F0B870023A63E;
 			packageReferences = (
 				99245E142C0F0DDE0023A63E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				99245EB12C11D3810023A63E /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 99245DFC2C0F0B870023A63E /* Products */;
 			projectDirPath = "";
@@ -173,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99245EAB2C11BD620023A63E /* .gitignore in Resources */,
 				99245E082C0F0B8A0023A63E /* Assets.xcassets in Resources */,
 				99245E0B2C0F0B8A0023A63E /* Base in Resources */,
 				99245E062C0F0B870023A63E /* Base in Resources */,
@@ -190,12 +239,15 @@
 				99245E242C0F6C500023A63E /* SavedContentsViewController.swift in Sources */,
 				99245E032C0F0B870023A63E /* ViewController.swift in Sources */,
 				99245DFF2C0F0B870023A63E /* AppDelegate.swift in Sources */,
+				99245EB62C11D3CD0023A63E /* Lotto.swift in Sources */,
 				99245E202C0F361C0023A63E /* UIImageView+Extension.swift in Sources */,
 				99245E1C2C0F2D0F0023A63E /* UILabel+Extension.swift in Sources */,
 				99245E1E2C0F31A30023A63E /* NetfliexMainViewController.swift in Sources */,
 				99245E222C0F6C400023A63E /* NewAndHotViewController.swift in Sources */,
 				99245E132C0F0C0C0023A63E /* SignUpViewController.swift in Sources */,
+				99245EB02C11BEA90023A63E /* LotteryViewController.swift in Sources */,
 				99245E012C0F0B870023A63E /* SceneDelegate.swift in Sources */,
+				99245EAE2C11BD9D0023A63E /* APIKey.swift in Sources */,
 				99245E1A2C0F1DAA0023A63E /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +491,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		99245EB12C11D3810023A63E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -446,6 +506,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 99245E142C0F0DDE0023A63E /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		99245EB22C11D3810023A63E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99245EB12C11D3810023A63E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
