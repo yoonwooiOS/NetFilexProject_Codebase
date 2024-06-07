@@ -146,9 +146,9 @@ class NetfliexMainViewController: UIViewController {
         netflixLogo.primaryImageView(assetName: "single-small", contendMode: .scaleAspectFill, cornerRadius: 0)
         
         titleLabel.primaryTitleLabel(labelText: "고래밥님", textAlignment: .center, fontSize: 20, textColor: .white)
-        describeLable.primarySubTitleLabel(labelText: "응원하고픈 · 흥미진진 · 사극 전투 · 한국 작품", textAlignment: .center, fontSize: 14, textColor: .white)
+        describeLable.primarySubTitleLabel(labelText: "응원하고픈 · 흥미진진 · 사극 전투 · 한국 작품", textAlignment: .center, fontSize: 14, textColor: .white, backgourndColor: .clear)
         
-        nowPopularContentsLabel.primarySubTitleLabel(labelText: "지금 뜨는 콘텐츠", textAlignment: .left, fontSize: 14, textColor: .white)
+        nowPopularContentsLabel.primarySubTitleLabel(labelText: "지금 뜨는 콘텐츠", textAlignment: .left, fontSize: 14, textColor: .white, backgourndColor: .clear)
        
         playButton.primaryButton(buttonTitle: "", titleColor: .clear, fontSize: 0, backgroundColor: .clear, cornerRadius: 10, assetImageName: "play_normal")
         playButton.contentVerticalAlignment = .fill

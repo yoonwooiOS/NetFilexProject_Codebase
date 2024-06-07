@@ -19,4 +19,14 @@ struct Lotto: Decodable {
     let drwtNo6: Int
     let bnusNo: Int
     
+    var drwDate: String {
+        
+        return "\(drwNoDate) 추첨"
+    }
+    
+    var drawResult: String {
+        
+        return "\(Lotto.drwNo)회"
+        
+    }
 }

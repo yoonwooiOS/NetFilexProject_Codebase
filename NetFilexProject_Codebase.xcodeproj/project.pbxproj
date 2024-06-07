@@ -27,6 +27,9 @@
 		99245EB02C11BEA90023A63E /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EAF2C11BEA90023A63E /* LotteryViewController.swift */; };
 		99245EB32C11D3810023A63E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 99245EB22C11D3810023A63E /* Alamofire */; };
 		99245EB62C11D3CD0023A63E /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EB52C11D3CD0023A63E /* Lotto.swift */; };
+		99245EB92C128E350023A63E /* DailyBoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EB82C128E350023A63E /* DailyBoxOfficeViewController.swift */; };
+		99245EBB2C128F9A0023A63E /* MovieRankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EBA2C128F9A0023A63E /* MovieRankTableViewCell.swift */; };
+		99245EBE2C12A3200023A63E /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EBD2C12A3200023A63E /* Movies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		99245EAD2C11BD9D0023A63E /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		99245EAF2C11BEA90023A63E /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
 		99245EB52C11D3CD0023A63E /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
+		99245EB82C128E350023A63E /* DailyBoxOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBoxOfficeViewController.swift; sourceTree = "<group>"; };
+		99245EBA2C128F9A0023A63E /* MovieRankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRankTableViewCell.swift; sourceTree = "<group>"; };
+		99245EBD2C12A3200023A63E /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			children = (
 				99245EAA2C11BD620023A63E /* .gitignore */,
 				99245EAC2C11BD860023A63E /* APIKeys */,
+				99245EB72C128CE80023A63E /* DailyBoxOfiice */,
 				99245EA82C11BC5A0023A63E /* LotteryAPI */,
 				99245DFD2C0F0B870023A63E /* NetFilexProject_Codebase */,
 				99245DFC2C0F0B870023A63E /* Products */,
@@ -151,6 +158,24 @@
 			isa = PBXGroup;
 			children = (
 				99245EB52C11D3CD0023A63E /* Lotto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		99245EB72C128CE80023A63E /* DailyBoxOfiice */ = {
+			isa = PBXGroup;
+			children = (
+				99245EBC2C12A30D0023A63E /* Model */,
+				99245EB82C128E350023A63E /* DailyBoxOfficeViewController.swift */,
+				99245EBA2C128F9A0023A63E /* MovieRankTableViewCell.swift */,
+			);
+			path = DailyBoxOfiice;
+			sourceTree = "<group>";
+		};
+		99245EBC2C12A30D0023A63E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99245EBD2C12A3200023A63E /* Movies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,13 +266,16 @@
 				99245DFF2C0F0B870023A63E /* AppDelegate.swift in Sources */,
 				99245EB62C11D3CD0023A63E /* Lotto.swift in Sources */,
 				99245E202C0F361C0023A63E /* UIImageView+Extension.swift in Sources */,
+				99245EBB2C128F9A0023A63E /* MovieRankTableViewCell.swift in Sources */,
 				99245E1C2C0F2D0F0023A63E /* UILabel+Extension.swift in Sources */,
 				99245E1E2C0F31A30023A63E /* NetfliexMainViewController.swift in Sources */,
+				99245EBE2C12A3200023A63E /* Movies.swift in Sources */,
 				99245E222C0F6C400023A63E /* NewAndHotViewController.swift in Sources */,
 				99245E132C0F0C0C0023A63E /* SignUpViewController.swift in Sources */,
 				99245EB02C11BEA90023A63E /* LotteryViewController.swift in Sources */,
 				99245E012C0F0B870023A63E /* SceneDelegate.swift in Sources */,
 				99245EAE2C11BD9D0023A63E /* APIKey.swift in Sources */,
+				99245EB92C128E350023A63E /* DailyBoxOfficeViewController.swift in Sources */,
 				99245E1A2C0F1DAA0023A63E /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,14 +22,14 @@ extension UILabel {
     }
     
     
-    func primarySubTitleLabel(labelText text:String, textAlignment:NSTextAlignment,   fontSize size:Int,textColor color:UIColor) {
+    func primarySubTitleLabel(labelText text:String, textAlignment:NSTextAlignment,   fontSize size:Int,textColor color:UIColor, backgourndColor bgColor: UIColor) {
         
         self.text = text
         self.font = .systemFont(ofSize: CGFloat(size))
         self.textAlignment = textAlignment
         self.textColor = color
         self.numberOfLines = 0
-        
+        self.backgroundColor = bgColor
         
     }
     

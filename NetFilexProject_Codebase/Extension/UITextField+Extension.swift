@@ -14,9 +14,10 @@ extension UITextField {
         self.attributedPlaceholder = NSAttributedString(
             string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         self.font = .systemFont(ofSize: 14)
+        self.borderStyle = .roundedRect
         self.textAlignment = .center
         self.layer.cornerRadius = 5
-        self.backgroundColor = .systemGray2
+        self.backgroundColor = .clear
         
         
     }

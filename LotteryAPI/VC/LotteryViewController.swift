@@ -9,11 +9,6 @@ import UIKit
 import SnapKit
 import Alamofire
 
-
-
-
-
-
 class LotteryViewController: UIViewController, UITextFieldDelegate {
     
     var lottoNumberTextfield = UITextField()
@@ -33,7 +28,6 @@ class LotteryViewController: UIViewController, UITextFieldDelegate {
     let pickerView = UIPickerView()
     let rounds = Array(900...999)
     var roundList: [Int] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,59 +65,72 @@ class LotteryViewController: UIViewController, UITextFieldDelegate {
     func configureLayout() {
         lottoNumberTextfield.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(8)
-            make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(52)
+            make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(32)
             make.height.equalTo(48)
         }
         winningNumberGuideLabel.snp.makeConstraints { make in
             make.top.equalTo(lottoNumberTextfield.snp.bottom).offset(16)
-            make.leading.equalTo(view.safeAreaLayoutGuide).offset(52)
+            make.leading.equalTo(view.safeAreaLayoutGuide).offset(32)
         }
         dataLabel.snp.makeConstraints { make in
             make.top.equalTo(lottoNumberTextfield.snp.bottom).offset(16)
-            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(52)
+            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(32)
         }
         customShadowImage.snp.makeConstraints { make in
             make.top.equalTo(winningNumberGuideLabel.snp.bottom).offset(8)
-            make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(52)
+            make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(32)
             make.height.equalTo(1)
         }
         lottoRoundLabel.snp.makeConstraints { make in
             make.top.equalTo(customShadowImage.snp.bottom).offset(16)
-            make.centerX.equalTo(view.safeAreaLayoutGuide).inset(52)
+            make.centerX.equalTo(view.safeAreaLayoutGuide).inset(32)
             make.height.equalTo(40)
         }
         firstWinningNumberLabel.snp.makeConstraints { make in
             make.top.equalTo(lottoRoundLabel.snp.bottom).offset(16)
-            make.leading.equalTo(view.safeAreaLayoutGuide).offset(52)
+            make.leading.equalTo(view.safeAreaLayoutGuide).offset(28)
+            make.size.equalTo(40)
         }
         secondWinningNumberLabel.snp.makeConstraints { make in
             make.top.equalTo(lottoRoundLabel.snp.bottom).offset(16)
-            make.leading.equalTo(firstWinningNumberLabel.snp.trailing).offset(16)
+            make.leading.equalTo(firstWinningNumberLabel.snp.trailing).offset(8)
+            make.size.equalTo(40)
+
         }
         thirdinningNumberLabel.snp.makeConstraints { make in
             make.top.equalTo(lottoRoundLabel.snp.bottom).offset(16)
-            make.leading.equalTo(secondWinningNumberLabel.snp.trailing).offset(16)
+            make.leading.equalTo(secondWinningNumberLabel.snp.trailing).offset(4)
+            make.size.equalTo(40)
+
         }
         fourthWinningNumberLabel.snp.makeConstraints { make in
             make.top.equalTo(lottoRoundLabel.snp.bottom).offset(16)
-            make.leading.equalTo(thirdinningNumberLabel.snp.trailing).offset(16)
+            make.leading.equalTo(thirdinningNumberLabel.snp.trailing).offset(4)
+            make.size.equalTo(40)
+
         }
         fifthWinningNumberLabel.snp.makeConstraints { make in
             make.top.equalTo(lottoRoundLabel.snp.bottom).offset(16)
-            make.leading.equalTo(fourthWinningNumberLabel.snp.trailing).offset(16)
+            make.leading.equalTo(fourthWinningNumberLabel.snp.trailing).offset(4)
+            make.size.equalTo(40)
+
         }
         sixthtWinningNumberLabel.snp.makeConstraints { make in
             make.top.equalTo(lottoRoundLabel.snp.bottom).offset(16)
-            make.leading.equalTo(fifthWinningNumberLabel.snp.trailing).offset(16)
+            make.leading.equalTo(fifthWinningNumberLabel.snp.trailing).offset(4)
+            make.size.equalTo(40)
+
         }
         plustBonusImage.snp.makeConstraints { make in
-            make.top.equalTo(lottoRoundLabel.snp.bottom).offset(16)
-            make.leading.equalTo(sixthtWinningNumberLabel.snp.trailing).offset(16)
+            make.top.equalTo(lottoRoundLabel.snp.bottom).offset(24)
+            make.leading.equalTo(sixthtWinningNumberLabel.snp.trailing).offset(8)
             
         }
         bonustWinningNumberLabel.snp.makeConstraints { make in
             make.top.equalTo(lottoRoundLabel.snp.bottom).offset(16)
-            make.leading.equalTo(plustBonusImage.snp.trailing).offset(16)
+            make.leading.equalTo(plustBonusImage.snp.trailing).offset(8)
+            make.size.equalTo(40)
+
         }
         
         bonusLabel.snp.makeConstraints { make in
@@ -134,17 +141,27 @@ class LotteryViewController: UIViewController, UITextFieldDelegate {
     
     func configureUI() {
         
-        navigationItem.title = "Lotto"
-        lottoNumberTextfield.backgroundColor = .lightGray
-        lottoNumberTextfield.textAlignment = .center
-        
-        winningNumberGuideLabel.text = "당첨번호 안내"
+        navigationItem.title = "Lottery"
+        lottoNumberTextfield.tintColor = .clear
+        lottoNumberTextfield.primaryTextfield(placeholderText: "궁금하신 로또 회차를 입력해주세요")
+       
+        firstWinningNumberLabel.primarySubtitleLabel(fontSize: 14, backgroundColor: .systemYellow)
+        secondWinningNumberLabel.primarySubtitleLabel(fontSize: 14, backgroundColor: .systemBlue)
+        thirdinningNumberLabel.primarySubtitleLabel(fontSize: 14, backgroundColor: .systemBlue)
+        fourthWinningNumberLabel.primarySubtitleLabel(fontSize: 14, backgroundColor: .systemRed)
+        fifthWinningNumberLabel.primarySubtitleLabel(fontSize: 14, backgroundColor: .systemRed)
+        sixthtWinningNumberLabel.primarySubtitleLabel(fontSize: 14, backgroundColor: .systemGray)
+        bonustWinningNumberLabel.primarySubtitleLabel(fontSize: 14, backgroundColor: .systemGray)
+        winningNumberGuideLabel.primaryTitleLabel(labelText: "당첨번호 안내", textAlignment: .left, fontSize: 14, textColor: .black)
+        bonusLabel.primarySubTitleLabel(labelText: "보너스", textAlignment: .center, fontSize: 10, textColor: .systemGray, backgourndColor: .clear)
+       
         customShadowImage.backgroundColor = .systemGray5
-        
         
         plustBonusImage.image = UIImage(systemName: "plus")
         plustBonusImage.tintColor = .black
-        bonusLabel.font = .systemFont(ofSize: 8)
+       
+        dataLabel.font = .systemFont(ofSize: 10)
+        dataLabel.textColor = .systemGray
     }
     func requireLottoApi() {
         
@@ -153,6 +170,7 @@ class LotteryViewController: UIViewController, UITextFieldDelegate {
         AF.request(url).responseDecodable(of: Lotto.self) { response in
             switch response.result {
             case .success(let value):
+                
                 print(value)
                 self.firstWinningNumberLabel.text = "\(value.drwtNo1)"
                 self.secondWinningNumberLabel.text = "\(value.drwtNo2)"
@@ -222,11 +240,12 @@ extension LotteryViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
     }
     @objc func cacelPicker() {
+        
         lottoNumberTextfield.text = nil
         lottoNumberTextfield.resignFirstResponder()
         
-        
     }
+    
     // Components - tableView의 Section
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -238,9 +257,9 @@ extension LotteryViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        return String(roundList[row])
-        
+      
+            return String(roundList[row])
+    
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -248,12 +267,22 @@ extension LotteryViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         lottoNumberTextfield.text = String(roundList[row])
         
     }
-    
 }
 
 
 
 
-
-
-
+extension UILabel {
+    
+    func primarySubtitleLabel(fontSize size: CGFloat , backgroundColor bcColor: UIColor) {
+        
+        self.font = .systemFont(ofSize: size)
+        self.textColor = .white
+        self.textAlignment = .center
+        self.backgroundColor = bcColor
+        self.layer.cornerRadius = 20
+        self.layer.masksToBounds = true
+        
+    }
+    
+}
