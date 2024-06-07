@@ -170,19 +170,19 @@
 			isa = PBXGroup;
 			children = (
 				99245EBF2C12DEF80023A63E /* Extension */,
-				99245EBC2C12A30D0023A63E /* Model */,
+				99245EBC2C12A30D0023A63E /* VC */,
 				99245EB82C128E350023A63E /* DailyBoxOfficeViewController.swift */,
 				99245EBA2C128F9A0023A63E /* MovieRankTableViewCell.swift */,
 			);
 			path = DailyBoxOfiice;
 			sourceTree = "<group>";
 		};
-		99245EBC2C12A30D0023A63E /* Model */ = {
+		99245EBC2C12A30D0023A63E /* VC */ = {
 			isa = PBXGroup;
 			children = (
 				99245EBD2C12A3200023A63E /* Movies.swift */,
 			);
-			path = Model;
+			path = VC;
 			sourceTree = "<group>";
 		};
 		99245EBF2C12DEF80023A63E /* Extension */ = {

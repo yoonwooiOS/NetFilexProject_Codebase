@@ -78,7 +78,7 @@ class DailyBoxOfficeViewController: UIViewController {
        
         customshadowView.backgroundColor = .white
         
-        userTextfield.text = "20200401"
+        userTextfield.text = "\(BoxOfficeData.yesterday())"
         userTextfield.primaryTextfield(placeholderText: "궁금하신 날짜를 입력해주세요", textAlignment: .left)
         userTextfield.keyboardType = .numberPad
         
@@ -96,9 +96,9 @@ class DailyBoxOfficeViewController: UIViewController {
     }
     
     func requireLottoApi() {
+      
         
-        
-        let url = "\(APIURL.dailyBoxOffice)\(DailyBoxOfficeData.showRange)"
+        let url = "\(APIURL.dailyBoxOffice)\(BoxOfficeData.yesterday())"
         AF.request(url).responseDecodable(of: BoxOfficeData.self) { response in
             switch response.result {
             case .success(let value):

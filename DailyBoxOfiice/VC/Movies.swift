@@ -20,7 +20,7 @@ struct BoxOfficeResult:Decodable {
 // 통신한 API의 데이터를 담는 역할
 // dailyBoxOfficeList가 api에서 배열로 되어 있음
 struct DailyBoxOfficeData:Decodable {
-    static var showRange  = "20200401"
+    static var showRange  = BoxOfficeData.yesterday()
     let dailyBoxOfficeList: [BoxOfficeResult]
     
 }
@@ -28,6 +28,19 @@ struct DailyBoxOfficeData:Decodable {
 // 사용하기 편리하게 만들기 위해
 struct BoxOfficeData: Decodable {
     let boxOfficeResult: DailyBoxOfficeData
+    
+    
+    static func yesterday() -> String {
+        
+        let yesterDay = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        let convertDate = dateFormatter.string(from: yesterDay)
+        return convertDate
+        
+        
+    }
+    
 }
 
 
