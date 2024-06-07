@@ -142,8 +142,8 @@ class LotteryViewController: UIViewController, UITextFieldDelegate {
     func configureUI() {
         
         navigationItem.title = "Lottery"
-        lottoNumberTextfield.tintColor = .clear
-        lottoNumberTextfield.primaryTextfield(placeholderText: "궁금하신 로또 회차를 입력해주세요")
+        
+        lottoNumberTextfield.primaryTextfield(placeholderText: "궁금하신 로또 회차를 입력해주세요", textAlignment: .left)
        
         firstWinningNumberLabel.primarySubtitleLabel(fontSize: 14, backgroundColor: .systemYellow)
         secondWinningNumberLabel.primarySubtitleLabel(fontSize: 14, backgroundColor: .systemBlue)

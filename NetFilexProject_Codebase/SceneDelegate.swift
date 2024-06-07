@@ -40,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
         }
         
-        let mainvc = LotteryViewController()
+        let mainvc = DailyBoxOfficeViewController()
         let navigationController = UINavigationController(rootViewController: mainvc)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

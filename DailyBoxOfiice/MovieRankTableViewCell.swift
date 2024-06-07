@@ -36,7 +36,6 @@ class MovieRankTableViewCell: UITableViewCell {
         
     }
     
-    
     func configureLayout() {
         
         rankLabel.snp.makeConstraints { make in
@@ -63,28 +62,14 @@ class MovieRankTableViewCell: UITableViewCell {
         
     }
     func configureUI() {
+        
         contentView.backgroundColor = .black
-        rankLabel.primarySubTitleLabel(labelText: "1", textAlignment: .center, fontSize: 14, textColor: .black, backgourndColor: .clear)
+        rankLabel.dbPrimaryLabel( textAlignment: .center, fontSize: 14, textColor: .black, backgourndColor: .clear)
         rankLabel.backgroundColor = .white
-        movieTitle.primarySubTitleLabel(labelText: "무빙", textAlignment: .left, fontSize: 14, textColor: .white, backgourndColor: .clear)
-        dateLabel.primarySubTitleLabel(labelText: "2024-06-05", textAlignment: .center, fontSize: 12, textColor: .systemGray5, backgourndColor: .clear)
-        dateLabel.text = "2024-06-05"
-       
- 
+        movieTitle.dbPrimaryLabel(textAlignment: .left, fontSize: 14, textColor: .white, backgourndColor: .clear)
+        dateLabel.dbPrimaryLabel(textAlignment: .center, fontSize: 12, textColor: .systemGray5, backgourndColor: .clear)
         
         
-        
-        
-        
-        
-        
-    }
-    
-    func configureCell() {
-        
-        
-        
-    }
-    
-
+       }
 }
+

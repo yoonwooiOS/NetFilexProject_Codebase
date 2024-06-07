@@ -14,13 +14,13 @@ struct BoxOfficeResult:Decodable {
     
     let rank: String
     let movieNm: String
-    let movieCd: String
+    let openDt: String
 
 }
 // 통신한 API의 데이터를 담는 역할
 // dailyBoxOfficeList가 api에서 배열로 되어 있음
 struct DailyBoxOfficeData:Decodable {
-    static var showRange  = "20240606"
+    static var showRange  = "20200401"
     let dailyBoxOfficeList: [BoxOfficeResult]
     
 }

@@ -30,6 +30,8 @@
 		99245EB92C128E350023A63E /* DailyBoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EB82C128E350023A63E /* DailyBoxOfficeViewController.swift */; };
 		99245EBB2C128F9A0023A63E /* MovieRankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EBA2C128F9A0023A63E /* MovieRankTableViewCell.swift */; };
 		99245EBE2C12A3200023A63E /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EBD2C12A3200023A63E /* Movies.swift */; };
+		99245EC12C12DF200023A63E /* DBUILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EC02C12DF200023A63E /* DBUILabel+Extension.swift */; };
+		99245EC32C12DF540023A63E /* DBUIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EC22C12DF540023A63E /* DBUIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		99245EB82C128E350023A63E /* DailyBoxOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBoxOfficeViewController.swift; sourceTree = "<group>"; };
 		99245EBA2C128F9A0023A63E /* MovieRankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRankTableViewCell.swift; sourceTree = "<group>"; };
 		99245EBD2C12A3200023A63E /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		99245EC02C12DF200023A63E /* DBUILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBUILabel+Extension.swift"; sourceTree = "<group>"; };
+		99245EC22C12DF540023A63E /* DBUIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBUIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 		99245EB72C128CE80023A63E /* DailyBoxOfiice */ = {
 			isa = PBXGroup;
 			children = (
+				99245EBF2C12DEF80023A63E /* Extension */,
 				99245EBC2C12A30D0023A63E /* Model */,
 				99245EB82C128E350023A63E /* DailyBoxOfficeViewController.swift */,
 				99245EBA2C128F9A0023A63E /* MovieRankTableViewCell.swift */,
@@ -178,6 +183,15 @@
 				99245EBD2C12A3200023A63E /* Movies.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		99245EBF2C12DEF80023A63E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				99245EC02C12DF200023A63E /* DBUILabel+Extension.swift */,
+				99245EC22C12DF540023A63E /* DBUIButton+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +276,7 @@
 			files = (
 				99245E182C0F15340023A63E /* UITextField+Extension.swift in Sources */,
 				99245E242C0F6C500023A63E /* SavedContentsViewController.swift in Sources */,
+				99245EC12C12DF200023A63E /* DBUILabel+Extension.swift in Sources */,
 				99245E032C0F0B870023A63E /* ViewController.swift in Sources */,
 				99245DFF2C0F0B870023A63E /* AppDelegate.swift in Sources */,
 				99245EB62C11D3CD0023A63E /* Lotto.swift in Sources */,
@@ -269,6 +284,7 @@
 				99245EBB2C128F9A0023A63E /* MovieRankTableViewCell.swift in Sources */,
 				99245E1C2C0F2D0F0023A63E /* UILabel+Extension.swift in Sources */,
 				99245E1E2C0F31A30023A63E /* NetfliexMainViewController.swift in Sources */,
+				99245EC32C12DF540023A63E /* DBUIButton+Extension.swift in Sources */,
 				99245EBE2C12A3200023A63E /* Movies.swift in Sources */,
 				99245E222C0F6C400023A63E /* NewAndHotViewController.swift in Sources */,
 				99245E132C0F0C0C0023A63E /* SignUpViewController.swift in Sources */,

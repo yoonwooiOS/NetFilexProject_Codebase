@@ -103,11 +103,11 @@ class SignUpViewController: UIViewController {
         view.backgroundColor = .black
         titleLabel.primaryTitleLabel(labelText: "YUNFLIX", textAlignment: .center, fontSize: 34, textColor: .systemRed)
         
-        emailTextField.primaryTextfield(placeholderText: "이메일 주소 또는 전화번호")
-        passwordTextField.primaryTextfield(placeholderText: "비밀번호")
-        nicknameTextField.primaryTextfield(placeholderText: "닉네임")
-        locationTextField.primaryTextfield(placeholderText: "위치")
-        referralCodeTextField.primaryTextfield(placeholderText: "추천 코드")
+        emailTextField.primaryTextfield(placeholderText: "이메일 주소 또는 전화번호", textAlignment: .center)
+        passwordTextField.primaryTextfield(placeholderText: "비밀번호", textAlignment: .center)
+        nicknameTextField.primaryTextfield(placeholderText: "닉네임", textAlignment: .center)
+        locationTextField.primaryTextfield(placeholderText: "위치", textAlignment: .center)
+        referralCodeTextField.primaryTextfield(placeholderText: "추천 코드", textAlignment: .center)
         
         signUpButton.primaryButton(buttonTitle: "회원가입", titleColor: .black, fontSize: 14, backgroundColor: .systemGray5, cornerRadius: 5, assetImageName: "")
         

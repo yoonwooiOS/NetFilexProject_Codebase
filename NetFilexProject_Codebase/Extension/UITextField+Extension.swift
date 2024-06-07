@@ -9,13 +9,13 @@ import UIKit
 
 extension UITextField {
     
-    func primaryTextfield(placeholderText text: String) {
-        
+    func primaryTextfield(placeholderText text: String, textAlignment: NSTextAlignment) {
+        self.textColor = .white
         self.attributedPlaceholder = NSAttributedString(
             string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         self.font = .systemFont(ofSize: 14)
         self.borderStyle = .roundedRect
-        self.textAlignment = .center
+        self.textAlignment = textAlignment
         self.layer.cornerRadius = 5
         self.backgroundColor = .clear
         
